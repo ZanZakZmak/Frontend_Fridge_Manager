@@ -1,15 +1,17 @@
 <template>
+<router-link to="/shoppinglistsingle">
   <div class="card">
     <div class="card-header">Naziv shopping liste</div>
     <div class="card-body">
-      <ul class="list-group list-group-flush">
-        <li>An item</li>
-        <li>A second item</li>
-        <li>A third item</li>
-      </ul>
+      <div class="row">
+      <div class="text-start col-6">količina:<span class="bg-secondary badge">5</span></div>
+      
+      <div class="text-end col-6">total: 245 kn</div>
+      </div>
     </div>
-    <div class="card-footer" text-muted>2 days ago</div>
+    <div class="card-footer text-end" text-muted>24.05.2021</div>
   </div>
+</router-link>
 </template>
 <script>
 

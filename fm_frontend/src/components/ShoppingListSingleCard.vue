@@ -47,6 +47,6 @@
 <script>
 export default {
   props: ["info"],
-  name: "FridgeCard",
+  name: "ShoppingListSingleCard",
 };
 </script>

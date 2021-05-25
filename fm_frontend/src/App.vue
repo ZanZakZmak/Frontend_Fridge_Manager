@@ -63,11 +63,15 @@
               <router-link to="/">Fridge</router-link>  | 
             </li>
             <li class="nav-item">
-              <router-link to="/shoppinglist">ShoppingList</router-link>
+              <router-link to="/shoppinglist">ShoppingList</router-link>  |
+            </li>
+             <li class="nav-item">
+              <router-link to="/profileedit">ProfileEdit</router-link>
             </li>
           </ul>
           <form class="d-flex">
             <input
+              v-model="store.searchTerm"
               class="form-control me-2"
               type="search"
               placeholder="Search"
@@ -79,11 +83,27 @@
       </div>
     </nav>
 
+    
+
     <div class="container">
       <router-view />
     </div>
   </div>
 </template>
+
+<script>
+
+import store from '@/store.js';
+
+export default {
+  name: 'app',
+  data() {
+    return {   
+      store,
+    }
+  },
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -92,6 +112,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #32527b;
+  //background-color: #dfe5e8 !important;
 }
 
 #nav {
@@ -103,7 +124,7 @@
     color: #32527b;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #42abb9;
     }
   }
 }

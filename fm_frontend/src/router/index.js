@@ -17,7 +17,23 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "shoppinglist" */ '../views/ShoppingList.vue')
-  }
+  },
+  {
+    path: '/profileedit',
+    name: 'ProfileEdit',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "profileedit" */ '../views/ProfileEdit.vue')
+  },
+  {
+    path: '/shoppinglistsingle',
+    name: 'ShoppingListSingle',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "shoppinglistsingle" */ '../views/ShoppingListSingle.vue')
+  },
 ]
 
 const router = new VueRouter({

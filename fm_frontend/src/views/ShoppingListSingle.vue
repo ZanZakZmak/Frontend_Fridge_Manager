@@ -1,6 +1,6 @@
 <template>
-  <div class="fridge">
-    <h1>My fridge</h1>
+  <div class="shopping list single">
+    <h1>place holder ime liste</h1>
 
     <div class="container">
       <div class="row">
@@ -24,18 +24,16 @@
 
         <div class="col-8">
           <h2 align="left"><u>Vegetables</u></h2>
-          <fridge-card v-for="card in filteredCards" :key="card.url" :info="card" />
+          <shopping-list-single-card v-for="card in cards" :key="card.url" :info="card" />
         </div>
       </div>
     </div>
   </div>
 </template>
 
-
-
 <script>
-import FridgeCard from "@/components/FridgeCard.vue";
-import store from '@/store.js';
+
+import ShoppingListSingleCard from "@/components/ShoppingListSingleCard.vue";
 
 let cards = [];
 
@@ -46,29 +44,17 @@ cards = [
 ];
 
 export default {
-  name: "Fridge",
+  name: "ShoppingListSingle",
   data: function () {
     return {
       cards: cards,
-      store,
+      
     };
   },
-  computed: {
-    filteredCards() {
-      let termin = this.store.searchTerm;
-     // let newCards = []
+   
 
-     /* for (let card of this.cards) {
-        if (card.description.indexOf(termin) >= 0) {
-          newCards.push(card)
-        }
-      }*/
-     // return newCards
-     return this.cards.filter((card) => card.description.includes(termin))
-    }
-  },
   components: {
-    FridgeCard,
+    ShoppingListSingleCard,
   },
 };
 </script>
