@@ -9,7 +9,7 @@
             <div class="card-body">
               <p class="bg-primary text-white">Buđžet : 500</p>
               <p class="bg-primary text-white">Potrošen buđžet : 245</p>
-              <router-link to="/shoppinglist"
+              <router-link to="/choosegrocery"
                 ><img
                   src="@/assets/fridge.svg"
                   alt=""
