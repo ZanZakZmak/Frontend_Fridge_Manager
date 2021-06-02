@@ -55,11 +55,11 @@
                       />
                       </form>
                     </div>
-                    
                   
-                  <div class="col-2">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                       <button class="btn btn-primary">Edit</button>
                     </div>
+                    
                 </div>
               </div>
             </div>

@@ -1,5 +1,7 @@
 <template>
   <div class="choosegrocery">
+    <h1>Choose Groceries</h1>
+
     <div class="container">
       <div class="row">
         <div class="col-2">
@@ -17,7 +19,7 @@
           <div class="card">
             <div class="card-body">
               <h2 align="left"><u>Vegetables</u></h2>
-              <fridge-card
+              <grocery-card
                 v-for="card in filteredCards"
                 :key="card.url"
                 :info="card"
@@ -31,7 +33,7 @@
 </template>
 
 <script>
-import FridgeCard from "@/components/FridgeCard.vue";
+import GroceryCard from "@/components/GroceryCard.vue";
 import store from "@/store.js";
 
 let cards = [];
@@ -55,7 +57,7 @@ cards = [
 ];
 
 export default {
-  name: "Fridge",
+  name: "ChooseGrocery",
   data: function () {
     return {
       cards: cards,
@@ -77,7 +79,7 @@ export default {
     },
   },
   components: {
-    FridgeCard,
+    GroceryCard,
   },
 };
 </script>
