@@ -1,19 +1,19 @@
 <template>
   <div class="card">
-    <h5 id="boja" class="card-header">{{info.description}}</h5>
+    <h5 id="boja" class="card-header">{{info.naziv_namjernice}}</h5>
     
     <div class="card-body">
       
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <img class="card-img-top rounded-circle" :src="info.url" align="left" />
+            <img class="card-img-top rounded-circle" :src="info.url_namjernice" align="left" />
           </div>
           <div class="col-3">
             
-            <p align="left">rok trajanja: 20.05.2021</p>
-            <p align="left">cijena: 1.30</p>
-            <p align="left">količina <span class="bg-secondary badge">5</span> </p>
+            <p align="left">rok trajanja: {{info.fridge_stavka.rok}} </p>
+            <p align="left">cijena: {{info.cijena_namjernice}} </p>
+            <p align="left">količina <span class="bg-secondary badge"> {{info.fridge_stavka.kolicina}} </span> </p>
           </div>
           <div class="col-3">
             <a

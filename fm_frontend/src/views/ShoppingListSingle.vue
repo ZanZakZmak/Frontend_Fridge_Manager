@@ -1,6 +1,6 @@
 <template>
   <div class="shopping list single">
-    <h1>place holder ime liste</h1>
+    <h1>{{store.data1.shopping_liste[0].naziv_liste}}</h1>
 
     <div class="container">
       <div class="row">
@@ -24,10 +24,10 @@
         </div>
 
         <div class="col-8">
-          <h2 align="left"><u>Vegetables</u></h2>
+          
           <shopping-list-single-card
-            v-for="card in cards"
-            :key="card.url"
+            v-for="card in store.data1.shopping_liste[0].lista_namjernice"
+            :key="card.id_lista"
             :info="card"
           />
         </div>
@@ -38,6 +38,7 @@
 
 <script>
 import ShoppingListSingleCard from "@/components/ShoppingListSingleCard.vue";
+import store from "@/store.js";
 
 let cards = [];
 
@@ -64,6 +65,7 @@ export default {
   data: function () {
     return {
       cards: cards,
+      store,
     };
   },
 

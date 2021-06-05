@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <img class="card-img-top rounded-circle" :src="info.url" align="left" />
+            <img class="card-img-top rounded-circle" :src="info.url_namjernice" align="left" />
           </div>
           <div class="col-3">
             

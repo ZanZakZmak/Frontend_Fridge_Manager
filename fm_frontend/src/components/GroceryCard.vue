@@ -8,7 +8,7 @@
           <div class="col-6">
             <img
               class="card-img-top rounded-circle"
-              :src="info.url"
+              :src="info.url_namjernice"
               align="left"
             />
           </div>
@@ -20,7 +20,7 @@
               količina
               <input type="text" placeholder="" />
             </p>
-            <p align="left">cijena: 1.30 kn</p>
+            <p align="left"> {{info.cijena_namjernice}} kn </p>
           </div>
           <div class="col-3">
             <a
