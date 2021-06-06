@@ -78,6 +78,7 @@ let data1={
                                 kategorija:"povrće",
                                 lista_stavka:{
                                         kolicina: 5,
+                                        total_namjernica_lista: 0,
                                         
                                 },
                         },
@@ -89,6 +90,7 @@ let data1={
                                 kategorija:"voće",
                                 lista_stavka:{
                                         kolicina: 5,
+                                        total_namjernica_lista: 0,
                                         
                                 },
                         },
@@ -100,6 +102,7 @@ let data1={
                                 kategorija:"mlječni_proizvodi",
                                 lista_stavka:{
                                         kolicina: 5,
+                                        total_namjernica_lista: 0,
                                         
                                 },
                         },
@@ -119,6 +122,7 @@ let data1={
                                  kategorija:"povrće",
                                  lista_stavka:{
                                          kolicina: 5,
+                                         total_namjernica_lista: 0,
                                          
                                  },
                          },
@@ -130,6 +134,7 @@ let data1={
                                  kategorija:"voće",
                                  lista_stavka:{
                                          kolicina: 5,
+                                         total_namjernica_lista: 0,
                                          
                                  },
                          },
@@ -141,6 +146,7 @@ let data1={
                                  kategorija:"mlječni_proizvodi",
                                  lista_stavka:{
                                          kolicina: 5,
+                                         total_namjernica_lista: 0,
                                          
                                  },
                          },

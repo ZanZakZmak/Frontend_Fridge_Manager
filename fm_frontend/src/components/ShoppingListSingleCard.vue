@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h5 id="boja" class="card-header">{{info.description}}</h5>
+    <h5 id="boja" class="card-header">{{info.naziv_namjernice}}</h5>
     
     <div class="card-body">
       
@@ -11,9 +11,9 @@
           </div>
           <div class="col-3">
             
-            <p align="left">rok trajanja: 20.05.2021</p>
-            <p align="left">cijena: 1.30</p>
-            <p align="left">količina <span class="bg-secondary badge">5</span> </p>
+            <p align="left">cijena: {{info.cijena_namjernice}}</p>
+            <p align="left">količina: <span class="bg-secondary badge"> {{info.lista_stavka.kolicina}} </span> </p>
+            <p align="left">total: {{total_namjernica()}}</p>
           </div>
           <div class="col-3">
             <a
@@ -48,5 +48,16 @@
 export default {
   props: ["info"],
   name: "ShoppingListSingleCard",
+
+   methods:{
+    total_namjernica() {
+      let total=0
+      total=this.info.lista_stavka.total_namjernica_lista=(this.info.cijena_namjernice)*(this.info.lista_stavka.kolicina) 
+
+
+
+      return total;
+    }
+  },
 };
 </script>
