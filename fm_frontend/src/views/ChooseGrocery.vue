@@ -4,18 +4,24 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-2">
+        <div class="col-4">
           <div class="card">
             <div class="card-body">
+              
               <router-link to="/addgrocery">
-                <button type="button" class="btn btn-primary">
-                  Add new grocery
-                </button>
+                <img
+                  src="@/assets/igloo add.svg"
+                  alt=""
+                  width="130"
+                  height="124"
+                  class="d-inline-block align-text-top"
+              />
               </router-link>
+              <p>Add groceries</p>
             </div>
           </div>
         </div>
-        <div class="col-10">
+        <div class="col-8">
           <div class="card">
             <div class="card-body">
               <h2 align="left"><u>Vegetables</u></h2>

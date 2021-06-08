@@ -8,7 +8,7 @@
           <div class="card">
             <div class="card-body">
               <p class="bg-primary text-white">Buđžet : 500</p>
-              <p class="bg-primary text-white">Potrošen buđžet : 245</p>
+              <p class="bg-primary text-white">Potrošen buđžet : {{store.data1.profil.total}}</p>
               <button class="btn btn-primary">Edit</button>
             </div>
           </div>
@@ -69,4 +69,14 @@
     </div>
   </div>
 </template>
-<script></script>
+<script>
+import store from "@/store.js";
+export default{
+  name:'ProfileEdit',
+  data: function () {
+    return {
+      store,
+    };
+  },
+};
+</script>

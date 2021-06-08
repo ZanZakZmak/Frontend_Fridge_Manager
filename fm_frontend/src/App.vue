@@ -5,13 +5,13 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            src="@/assets/logo.png"
+            src="@/assets/fridge.svg"
             alt=""
-            width="30"
-            height="24"
+            width="40"
+            height="34"
             class="d-inline-block align-text-top"
           />
-          Bootstrap
+          Fridge Manager
         </a>
         <button
           class="navbar-toggler"
@@ -35,9 +35,7 @@
              <li class="nav-item">
               <router-link to="/profileedit">ProfileEdit</router-link>
             </li>
-             <li class="nav-item">
-              <router-link to="/proba">Proba</router-link>
-            </li>
+             
           </ul>
           <form class="d-flex">
             <input
@@ -88,7 +86,7 @@ export default {
 
 #nav {
   padding: 30px;
-  background-color: white !important;
+  background-color: #dfe5e8 !important;
 
   a {
     font-weight: bold;

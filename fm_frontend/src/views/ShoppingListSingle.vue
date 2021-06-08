@@ -1,6 +1,6 @@
 <template>
   <div class="shopping list single">
-    <h1>{{store.data1.shopping_liste[0].naziv_liste}}</h1>
+    <h1>{{info.naziv_liste}}</h1>
 
     <div class="container">
       <div class="row">
@@ -8,14 +8,14 @@
           <div class="card">
             <div class="card-body">
               <p class="bg-primary text-white">Buđžet : 500</p>
-              <p class="bg-primary text-white">Potrošen buđžet : 245</p>
-              <p class="bg-primary text-white">Total : {{total_liste(store.data1.shopping_liste[0].lista_namjernice)}}</p>
-              <router-link to="/shoppinglist"
+              <p class="bg-primary text-white">Potrošen buđžet : {{store.data1.profil.total}}</p>
+              <p class="bg-primary text-white">Total : {{total_liste(info.lista_namjernice)}}</p>
+              <router-link to="/choosegrocery"
                 ><img
-                  src="@/assets/fridge.svg"
+                  src="@/assets/lista add.svg"
                   alt=""
-                  width="100"
-                  height="94"
+                  width="130"
+                  height="124"
                   class="d-inline-block align-text-top"
               /></router-link>
               <p>Add groceries</p>
@@ -26,7 +26,7 @@
         <div class="col-8">
           
           <shopping-list-single-card
-            v-for="card in store.data1.shopping_liste[0].lista_namjernice"
+            v-for="card in info.lista_namjernice"
             :key="card.id_lista"
             :info="card"
           />
@@ -43,6 +43,7 @@ import store from "@/store.js";
 
 
 export default {
+  props: ["info"],
   name: "ShoppingListSingle",
   data: function () {
     return {
@@ -58,9 +59,7 @@ export default {
     total_liste(budzet_liste) {
       let total=0
       budzet_liste.forEach(element => {total=total+element.lista_stavka.total_namjernica_lista});
-
-
-
+      this.info.suma_liste=total;
       return total;
     }
   },

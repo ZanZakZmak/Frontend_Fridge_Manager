@@ -1,5 +1,5 @@
 <template>
-<router-link to="/shoppinglistsingle">
+<router-link v-bind:to="{ name: 'ShoppingListSingle', params: {name: info.naziv_liste, info: info}}">
   <div class="card">
     <div class="card-header"> {{info.naziv_liste}} </div>
     <div class="card-body">

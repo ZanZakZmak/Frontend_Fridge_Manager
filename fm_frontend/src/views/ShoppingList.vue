@@ -8,14 +8,14 @@
             <div class="card">
               <div class="card-body">
                 <p class="bg-primary text-white">Buđžet : 500</p>
-                <p class="bg-primary text-white">Potrošen buđžet : 245</p>
+                <p class="bg-primary text-white">{{total(store.data1.shopping_liste)}} Potrošen buđžet : {{store.data1.profil.total}}</p>
 
               <router-link to="/addnewlist"
                 ><img
-                  src="@/assets/fridge.svg"
+                  src="@/assets/lista add.svg"
                   alt=""
-                  width="100"
-                  height="94"
+                  width="130"
+                  height="124"
                   class="d-inline-block align-text-top"/>
               </router-link> 
                  
@@ -47,6 +47,14 @@ export default {
     return {
       store,
     };
+  },
+  methods:{
+    total(total_liste) {
+      let total=0
+      total_liste.forEach(element => {total=total+element.suma_liste});
+      this.store.data1.profil.total=total;
+     
+    }
   },
 
   components: {

@@ -27,8 +27,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "profileedit" */ '../views/ProfileEdit.vue')
   },
   {
-    path: '/shoppinglistsingle',
+    path: '/shoppinglist/:name',
     name: 'ShoppingListSingle',
+    props: true,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -57,14 +58,6 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "addnewlist" */ '../views/AddNewList.vue')
-  },
-  {
-    path: '/proba',
-    name: 'Proba',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "proba" */ '../views/Proba.vue')
   },
 ]
 

@@ -8,13 +8,13 @@
           <div class="card">
             <div class="card-body">
               <p class="bg-primary text-white">Buđžet : 500</p>
-              <p class="bg-primary text-white">Potrošen buđžet : 245</p>
+              <p class="bg-primary text-white">Potrošen buđžet : {{store.data1.profil.total}}</p>
               <router-link to="/choosegrocery"
                 ><img
-                  src="@/assets/fridge.svg"
+                  src="@/assets/fridge add.svg"
                   alt=""
-                  width="100"
-                  height="94"
+                  width="130"
+                  height="124"
                   class="d-inline-block align-text-top"
               /></router-link>
               <p>Add groceries</p>
