@@ -33,9 +33,13 @@
               <router-link to="/shoppinglist">ShoppingList</router-link>  |
             </li>
              <li class="nav-item">
-              <router-link to="/profileedit">ProfileEdit</router-link>
+              <router-link to="/profileedit">ProfileEdit</router-link>   |
             </li>
-             
+            <li class="nav-item">
+              <router-link to="/proba">Proba</router-link>
+            </li>
+
+
           </ul>
           <form class="d-flex">
             <input
