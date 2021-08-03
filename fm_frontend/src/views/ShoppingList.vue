@@ -25,7 +25,7 @@
             </div>
           </div>
           <div class="col-8">
-            <shopping-list-card v-for="card in store.data1.shopping_liste" :key="card.id_lista" :info="card" />
+            <shopping-list-card v-for="card in shoping_liste" :key="card.id_lista" :info="card" />
           </div>
           <div class="col-1"></div>
         </div>
@@ -37,6 +37,7 @@
 <script>
 import ShoppingListCard from "@/components/ShoppingListCard.vue";
 import store from '@/store.js';
+import { lists } from "@/services";
 
 
 
@@ -46,9 +47,17 @@ export default {
   data: function () {
     return {
       store,
+      shoping_liste :[],
     };
   },
+
+  created() {
+    this.fetchPosts();
+  },
   methods:{
+     async fetchPosts() {
+      this.shoping_liste = await lists.getAll();
+    },
     total(total_liste) {
       let total=0
       total_liste.forEach(element => {total=total+element.suma_liste});

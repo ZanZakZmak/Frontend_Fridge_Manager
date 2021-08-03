@@ -40,13 +40,14 @@ export default {
   },
   name: "proba",
   methods: {
-    fetchPosts(term, category) {
+    /* fetchPosts(term, category) {
       let polje = []
       term = term || store.searchTerm;
       // get all  
       cards.getAll(term, category).then((response) => {
         let data = response.data;
         console.log("podatci sa backenda", data);
+        
         polje = data.map((doc) => {
           return {
             id: doc.id_namjernice,
@@ -55,21 +56,25 @@ export default {
             category: doc.kategorija,
             price: Number(doc.cijena_namjernice),
           };
-        });
-         //console.log(`ovo je ${polje}`)
+        }); 
+        console.log("podatci sa dreka", polje);
       });
-       
-      console.log(`ovo je ${polje}`)
-      return polje;
-    },
-    fetchAllPosts(term) {
+      console.log("podatci sa dreka vani", polje);
+      //return data;
+    }, */
+    async fetchPosts(term, category) {
+    term = term || store.searchTerm
+    let polje = await cards.getAll(term, category)
+    return polje
+    }, 
+    async fetchAllPosts(term) {
       term = term || store.searchTerm;
-      this.vegetables = this.fetchPosts(term, 'povrće')
-      this.fruit = this.fetchPosts(term, 'voće')
-      this.dairy = this.fetchPosts(term, 'mlječni_projzvodi')
-      this.fish = this.fetchPosts(term, 'fish')
-      this.meat = this.fetchPosts(term, 'meat')
-      this.drinks = this.fetchPosts(term, 'drinks')
+      this.vegetables = await this.fetchPosts(term, 'povrće')
+      this.fruit = await this.fetchPosts(term, 'voće')
+      this.dairy = await this.fetchPosts(term, 'mlječni_proizvodi')
+      this.fish = await this.fetchPosts(term, 'fish')
+      this.meat = await this.fetchPosts(term, 'meat')
+      this.drinks = await this.fetchPosts(term, 'drinks')
      
     },
     
