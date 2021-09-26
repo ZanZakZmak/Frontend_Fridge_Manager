@@ -6,7 +6,27 @@ let Service = axios.create({
     timeout: 1000
 })
 
+let users = {
+    async getOne(){
+        let users = {
+            async getOne(id) {
+            let response = await Service.get(`/users/${id}`);
+            let doc = response.data;
+            return {
+            id: doc._id,
+            username: doc.username,
+            email: doc.email,
+            password: doc.password,
+            budget: doc.budzet,
+            };
+        }
+            
+    }
+}
+}
+
 let cards = {
+
     async getAll(searchTerm, category) {
         let response = await Service.get(`/fridge?title=${searchTerm}&Category=${category}`)
         let grocery = response.data
